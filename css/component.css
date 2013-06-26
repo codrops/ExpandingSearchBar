@@ -41,6 +41,11 @@
 	color: #2c3e50;
 }
 
+input[type="search"].sb-search-input {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+}
+
 .sb-search-input::-webkit-input-placeholder {
 	color: #efb480;
 }
