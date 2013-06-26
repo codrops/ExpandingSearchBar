@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Expanding Search Bar Deconstructed</title>
+		<meta name="description" content="Expanding Search Bar Deconstructed" />
+		<meta name="keywords" content="transition, search, expanding, search input, sliding input, css3, javascript" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/ModalWindowEffects/"><span>Previous Demo</span></a>
+				<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=15599"><span>Back to the Codrops Article</span></a></span>
+			</div>
+			<header>
+				<h1>Expanding Search Bar Deconstructed <span>A click-to-expand search input</span></h1>
+			</header>
+			<div class="main clearfix">
+				<!-- Optional columns for small components -->
+				<div class="column">
+					<p>The search bar can be opened on click, it has a fluid width and it's mobile-friendly.</p>
+					<p><a href="http://tympanus.net/codrops/?p=15599">Read the tutorial</a></p>
+				</div>
+				<div class="column">
+					<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"></span>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/uisearch.js"></script>
+		<script>
+			new UISearch( document.getElementById( 'sb-search' ) );
+		</script>
+	</body>
+</html>
