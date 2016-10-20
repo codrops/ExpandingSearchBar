@@ -9,7 +9,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+/* Container for the entire search element */
 .sb-search {
 	position: relative;
 	margin-top: 10px;
@@ -23,7 +23,7 @@
 	transition: width 0.3s;
 	-webkit-backface-visibility: hidden;
 }
-
+/* The input element on the search element  */
 .sb-search-input {
 	position: absolute;
 	top: 0;
@@ -41,11 +41,14 @@
 	color: #2c3e50;
 }
 
+
 input[type="search"].sb-search-input {
+	/* remove special webkit formatting on the search input */
 	-webkit-appearance: none;
 	-webkit-border-radius: 0px;
 }
 
+/* browser specific placholder text color */
 .sb-search-input::-webkit-input-placeholder {
 	color: #efb480;
 }
@@ -61,7 +64,7 @@ input[type="search"].sb-search-input {
 .sb-search-input:-ms-input-placeholder {
 	color: #efb480;
 }
-
+/* format the search button and submit to share the same size and space */
 .sb-icon-search,
 .sb-search-submit  {
 	width: 60px;
@@ -76,7 +79,7 @@ input[type="search"].sb-search-input {
 	text-align: center;
 	cursor: pointer;
 }
-
+/* hide the submit but leave it clickable */
 .sb-search-submit {
 	background: #fff; /* IE needs this */
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
@@ -88,6 +91,7 @@ input[type="search"].sb-search-input {
 	z-index: -1;
 }
 
+/* format the search icon */
 .sb-icon-search {
 	color: #fff;
 	background: #e67e22;
@@ -102,6 +106,7 @@ input[type="search"].sb-search-input {
 	-webkit-font-smoothing: antialiased;
 }
 
+/* add the magnifying glass character from the icomoon font as a before pseudo element */
 .sb-icon-search:before {
 	content: "\e000";
 }
@@ -112,6 +117,7 @@ input[type="search"].sb-search-input {
 	width: 100%;
 }
 
+/* add the "active" color on the search button */
 .sb-search.sb-search-open .sb-icon-search,
 .no-js .sb-search .sb-icon-search {
 	background: #da6d0d;
@@ -119,6 +125,7 @@ input[type="search"].sb-search-input {
 	z-index: 11;
 }
 
+/* adjust z-index to make sure the search submit is clikacble and not below any other elements */
 .sb-search.sb-search-open .sb-search-submit,
 .no-js .sb-search .sb-search-submit {
 	z-index: 90;
