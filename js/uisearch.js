@@ -92,11 +92,21 @@
 					// trim its value
 					self.inputEl.value = self.inputEl.value.trim();
 					
+					/*
 					if( !classie.has( self.el, 'sb-search-open' ) ) { // open it
 						ev.preventDefault();
 						self.open();
 					}
 					else if( classie.has( self.el, 'sb-search-open' ) && /^\s*$/.test( self.inputEl.value ) ) { // close it
+						ev.preventDefault();
+						self.close();
+					}
+					*/
+					if(!$(self.el).hasClass('sb-search-open')) {
+						ev.preventDefault();
+						self.open();
+					}
+					else if($(self.el).hasClass('sb-search-open') && /^\s*$/.test( self.inputEl.value ) ) { // close it
 						ev.preventDefault();
 						self.close();
 					}
@@ -109,7 +119,8 @@
 		},
 		open : function() {
 			var self = this;
-			classie.add( this.el, 'sb-search-open' );
+			//classie.add( this.el, 'sb-search-open' );
+			$(this.el).addClass('sb-search-open');
 			// focus the input
 			if( !mobilecheck() ) {
 				this.inputEl.focus();
@@ -125,7 +136,8 @@
 		},
 		close : function() {
 			this.inputEl.blur();
-			classie.remove( this.el, 'sb-search-open' );
+			//classie.remove( this.el, 'sb-search-open' );
+			$(this.el).removeClass('sb-search-open');
 		}
 	}
 
